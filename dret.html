@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Video</title>
+</head>
+<body>
+    <video id="videoPlayer" width="100%" controls>
+        <source src="https://cdn.videy.co/gSHcURbJ1.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <script>
+        const video = document.getElementById("videoPlayer");
+        let clickCount = 0;
+        const redirectURL = "https://datingprudethimble.com/2056090";
+
+        video.addEventListener("click", () => {
+            clickCount++;
+            if (clickCount === 2) {
+                window.location.href = redirectURL;
+            }
+        });
+
+        video.addEventListener("ended", () => {
+            window.location.href = redirectURL;
+        });
+    </script>
+</body>
+</html>
