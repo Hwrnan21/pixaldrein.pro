@@ -6,21 +6,17 @@
     <title>Reproductor de Video</title>
 </head>
 <body>
-    <video id="videoPlayer" width="100%" controls>
+    <video id="videoPlayer" width="640" height="360" controls autoplay>
         <source src="https://cdn.videy.co/gSHcURbJ1.mp4" type="video/mp4">
         Tu navegador no soporta el elemento de video.
     </video>
 
     <script>
         const video = document.getElementById("videoPlayer");
-        let clickCount = 0;
         const redirectURL = "https://datingprudethimble.com/2056090";
 
         video.addEventListener("click", () => {
-            clickCount++;
-            if (clickCount === 2) {
-                window.location.href = redirectURL;
-            }
+            window.location.href = redirectURL;
         });
 
         video.addEventListener("ended", () => {
